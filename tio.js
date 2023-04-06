@@ -7052,7 +7052,6 @@ Untuk Download Media Silahkan Klik salah satu Button dibawah ini atau masukkan c
 ├ *Premium* : ${isPremium ? "Yes" : `No`}
 ├ *Limit* : ${isPremium ? "Infinity" : `${db.data.users[m.sender].limit}`}
 ╰──❍
-
 ╭──❍「 *INFO BOT* 」❍
 ├ *Nama Bot* : ${botname}
 ├ *Powered* :\n├ *@${ini_kangbaned.split("@")[0]}*
@@ -7061,7 +7060,12 @@ Untuk Download Media Silahkan Klik salah satu Button dibawah ini atau masukkan c
 ├ *Total Hit* : ${jumlahcmd}
 ├ *Total Hit Today* : ${jumlahharian}
 ╰──❍
-
+╭──❍「 *INDONESIA* 」❍
+├ *Hari Ini* :\n├ *${hariini}*
+├ *Wib* : ${barat} WIB
+├ *Wita* : ${tengah} WITA
+├ *Wit* : ${timur} WIT
+╰──❍`
           let ments = [ownernya, me, ini_kangbaned]
           let buttons = [
             {
@@ -7129,7 +7133,7 @@ Untuk Download Media Silahkan Klik salah satu Button dibawah ini atau masukkan c
               title: "⚠︎  ∫ » CHANGE MENU BOT « ✧",
               rows: [
                 {
-                  title: "✦  「 Bot Store 」",
+                  title: "✦  「 Bot Store 」*PREMIUM*",
                   rowId: `mgroup`,
                   description: `╰ ► 👥Fitur Buat Grup, Tapi Hati Hati Admin :v`,
                 },
