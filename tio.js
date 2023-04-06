@@ -2827,7 +2827,7 @@ Ketik *nyerah* untuk menyerah dan mengakui kekalahan`
           let data = require("./database/premium.json")
           let txt = `*------「 LIST PREMIUM 」------*\n\n`
           for (let i of data) {
-            txt += `*Nomer : ${i.id}*\n*Expired : ${i.expired} Second*\n\n`
+            txt += `*Nomer : ${i.id}*\n*Expired : ${i.expired} DAY*\n\n`
           }
           m.reply(txt)
         }
@@ -7045,7 +7045,7 @@ Untuk Download Media Silahkan Klik salah satu Button dibawah ini atau masukkan c
         {
           let ownernya = "0@s.whatsapp.net"
           let me = m.sender
-          let jawab = `*${ucapanWaktu}*
+          let jawab = `*_${ucapanWaktu_}*
 ╭──❍「 *INFO USER* 」❍
 ├ *Nama* : ${pushname}
 ├ *Number* : @${me.split("@")[0]}
@@ -7059,6 +7059,7 @@ Untuk Download Media Silahkan Klik salah satu Button dibawah ini atau masukkan c
 ├ *Prefix* :「 MULTI-PREFIX 」
 ├ *Total Hit* : ${jumlahcmd}
 ├ *Total Hit Today* : ${jumlahharian}
+├ *Website* : _https://ryzstoree.com_
 ╰──❍
 ╭──❍「 *INDONESIA* 」❍
 ├ *Hari Ini* :\n├ *${hariini}*
@@ -7359,10 +7360,10 @@ ${arr_rows.map((v) => `\n│ *»* ${v.title}`).join("")}
           if (!isAdmins) throw mess.admin
           if (!isPremium) throw mess.premime
           if (!qmsg) return m.reply("Reply pesanannya!")
-          tio.sendMessage(m.chat, q,{
+          tio.sendMessage(m.chat, {
             text: `「 *TRANSAKSI DI PROSES* 」\n\n\`\`\`📆 TANGGAL : ${tanggal2}\n⌚ JAM     : ${jam}\n✨ STATUS  : Proses\`\`\`\n\n📝 Catatan : ${q}\n\nPesanan @${
               qmsg.sender.split("@")[0]
-            } sedang di proses!`,
+            } sedang Di Proses Admin! ${groupName}`,
             mentions: [qmsg.sender],
           })
         }
