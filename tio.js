@@ -7092,6 +7092,7 @@ Untuk Download Media Silahkan Klik salah satu Button dibawah ini atau masukkan c
                 title: "Bot WhatsApp",
                 body: "Jangan Spam!",
                 showAdAttribution: true,
+                thumbnail: thumb,
                 mediaType: 2,
                 mediaUrl: ghme,
                 sourceUrl: webmy,
