@@ -91,7 +91,7 @@ const { state, saveCreds } = await useMultiFileAuthState('./src/sesi')
                 }
                 return message;
     },  
-        browser: ['BOTCAHX','Safari',''],
+        browser: ['RYZSTORE','Safari',''],
         auth: state,
 	generateHighQualityLinkPreview: true
     })
@@ -129,11 +129,6 @@ const { state, saveCreds } = await useMultiFileAuthState('./src/sesi')
     tio.ev.on('groups.update', async tioxd => {
        console.log(`${chalk.bgRed("Events Update")} 
        `.trim(), tioxd)
-       try {
-       ppgc = await tio.profilePictureUrl(tioxd[0].id, 'image')
-       } catch {
-       ppgc = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCB7iTtz1aO68sjGhK42vPQlte4MSsegaqUQ&usqp=CAU'
-       }
        let wm_tiodev = { url : ppgc }
        if (tioxd[0].announce == true) {
        tio.send5ButImg(tioxd[0].id, `「 *Group Settings Change* 」\n\nGroup telah ditutup oleh admin, Sekarang hanya admin yang dapat mengirim pesan !`, `GROUP MESSAGE`, wm_tiodev, [])
@@ -162,11 +157,7 @@ if (!anu.participants.includes(tio.user.jid)) {
 let metadata = await tio.groupMetadata(anu.id)
 let participants = anu.participants
 for (let num of participants) {
-try {
-ppuser = await tio.profilePictureUrl(num, 'image') 
-} catch {
-ppuser = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCB7iTtz1aO68sjGhK42vPQlte4MSsegaqUQ&usqp=CAU'
-}
+
 //Message Saat Ada User Yang Masuk Ke Grup
 //f (global.db.data.chats[m.chat].welcome) {
         
@@ -305,7 +296,7 @@ if (update.connection == "open" || update.receivedPendingNotifications == "true"
         let butown = [{ buttonId: `owner`, buttonText: { displayText: 'Owner' }, type: 1 }, { buttonId: `ping`, buttonText: { displayText: 'Status Bot' }, type: 1 }]
 	let txtown = `Halo Owner, Bot Telah Berhasil Tersambung Pada Nomer Ini \n\nJika Menemukan Eror, Bug, Atau Ingin Request Fitur Silahkan Hubungi Nomer Tersebut!`
 	let txtcrea = `Script ini telah dipakai oleh\nID: ${global.owner}@s.whatsapp.net`
-	lolcatjs.fromString('Sukses Mengirim Pesan Ke Owner Dan Creator ☑️')
+	lolcatjs.fromString('Sukses Mengirim Pesan Ke Owner ☑️')
 	tio.sendMessage(global.owner+'@s.whatsapp.net', { image: imgown, caption: txtown, buttons: butcrea, footer: global.ownerName })
         tio.sendMessage(global.creator+'@s.whatsapp.net', { image: imgcrea, caption: txtcrea, buttons: butown, footer: global.ownerName })
         tio.sendContact(global.owner+'@s.whatsapp.net', global.creator)
