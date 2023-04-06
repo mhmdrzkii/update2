@@ -6527,7 +6527,7 @@ keywords : ${x.keywords}`
           let gempa = await fetchJson(
             `https://data.bmkg.go.id/DataMKG/TEWS/autogempa.json`
           )
-          let teks = `   『 *"INFO GEMPA TERBARU"* 』\n\n*Tanggal :* "${gempa.Infogempa.gempa.Tanggal}"\n*Jam :* "${gempa.Infogempa.gempa.Jam}"\n*Date Time :* "${gempa.Infogempa.gempa.DateTime}"\n*Kordinat :* "${gempa.Infogempa.gempa.Coordinates}"\n*Lintang :* "${gempa.Infogempa.gempa.Lintang}"\n*Bujur :* "${gempa.Infogempa.gempa.Bujur}"\n*Getaran :* "${gempa.Infogempa.gempa.Magnitude}"\n*Kedalaman :* "${gempa.Infogempa.gempa.Kedalaman}"\n*Wilayah :* "${gempa.Infogempa.gempa.Wilayah}"\n*Potensi :* "${gempa.Infogempa.gempa.Potensi}"\n*Dirasakan :* "${gempa.Infogempa.gempa.Dirasakan}"\n\nSumber : https://data.bmkg.go.id\n\n*Script by TioXd*`
+          let teks = `   『 *"INFO GEMPA TERBARU"* 』\n\n*Tanggal :* "${gempa.Infogempa.gempa.Tanggal}"\n*Jam :* "${gempa.Infogempa.gempa.Jam}"\n*Date Time :* "${gempa.Infogempa.gempa.DateTime}"\n*Kordinat :* "${gempa.Infogempa.gempa.Coordinates}"\n*Lintang :* "${gempa.Infogempa.gempa.Lintang}"\n*Bujur :* "${gempa.Infogempa.gempa.Bujur}"\n*Getaran :* "${gempa.Infogempa.gempa.Magnitude}"\n*Kedalaman :* "${gempa.Infogempa.gempa.Kedalaman}"\n*Wilayah :* "${gempa.Infogempa.gempa.Wilayah}"\n*Potensi :* "${gempa.Infogempa.gempa.Potensi}"\n*Dirasakan :* "${gempa.Infogempa.gempa.Dirasakan}"\n\nSumber : https://data.bmkg.go.id\n\n*Script by RYZSTORE*`
           m.reply(teks)
         }
         break
@@ -6594,7 +6594,7 @@ Udara: ${cuaca.main.pressure + " HPa"}`
 *◈ Company* ${api.data.data[0].phones[0].carrier}
 *◈ Type* ${api.data.data[0].phones[0].type}
 
-*© BOTCAHX*`
+*© RYZSTORE*`
           const truei = await m.reply(msg)
           await tio.sendMessage(m.chat, {
             react: { text: `📋`, key: truei.key },
@@ -7354,13 +7354,14 @@ ${arr_rows.map((v) => `\n• ${v.title}`).join("")}
         }
         break
       case "proses":
+      case "p":
         {
           if (!m.isGroup) throw mess.group
           if (!isBotAdmins) throw mess.botAdmin
           if (!isAdmins) throw mess.admin
           if (!isPremium) throw mess.premime
           if (!qmsg) return m.reply("Reply pesanannya!")
-          tio.sendMessage(m.chat, q,{
+          tio.sendMessage(m.chat, {
             text: `「 *TRANSAKSI DI PROSES* 」\n\n\`\`\`📆 TANGGAL : ${tanggal2}\n⌚ JAM     : ${jam}\n✨ STATUS  : Proses\`\`\`\n\n📝 Catatan : ${q}\n\nPesanan @${
               qmsg.sender.split("@")[0]
             } sedang di proses!`,
@@ -7369,13 +7370,14 @@ ${arr_rows.map((v) => `\n• ${v.title}`).join("")}
         }
         break
       case "done":
+      case "d":
         {
           if (!m.isGroup) throw mess.group
           if (!isBotAdmins) throw mess.botAdmin
           if (!isAdmins) throw mess.admin
           if (!isPremium) throw mess.premime
           if (!qmsg) return m.reply("Reply pesanannya!")
-          tio.sendMessage(m.chat, q,{
+          tio.sendMessage(m.chat, {
             text: `「 *TRANSAKSI BERHASIL* 」\n\n\`\`\`📆 TANGGAL : ${tanggal2}\n⌚ JAM     : ${jam}\n✨ STATUS  : Berhasil\`\`\`\n\nTerimakasih @${
               qmsg.sender.split("@")[0]
             } *DITUNGGU NEXT ORDERAN NYA*`,
