@@ -7115,7 +7115,7 @@ Untuk Download Media Silahkan Klik salah satu Button dibawah ini atau masukkan c
                 {
                   title: "〽️ • Sewa",
                   rowId: `donasi`,
-                  description: `KLIK UNTUK SEWA BOT`,
+                  description: `KLIK UNTUK SEWA BOT STORE`,
                 },
                 {
                   title: "📴 • Owner",
@@ -7128,7 +7128,7 @@ Untuk Download Media Silahkan Klik salah satu Button dibawah ini atau masukkan c
               title: "⚠︎  ∫ » CHANGE MENU BOT « ✧",
               rows: [
                 {
-                  title: "✦  「 Group 」",
+                  title: "✦  「 Bot Store 」",
                   rowId: `mgroup`,
                   description: `╰ ► 👥Fitur Buat Grup, Tapi Hati Hati Admin :v`,
                 },
@@ -7276,7 +7276,7 @@ Untuk Download Media Silahkan Klik salah satu Button dibawah ini atau masukkan c
 
           tio.sendMessage(m.chat, {
             text: `*[LIST FROM ${groupName}]*
-${arr_rows.map((v) => `\n✦ ${v.title}`).join("")}
+${arr_rows.map((v) => `\n│ *»* ${v.title}`).join("")}
 `,
             quoted: fkontak,
           })
@@ -7381,6 +7381,11 @@ ${arr_rows.map((v) => `\n✦ ${v.title}`).join("")}
       case "mgroup":
         {
           goup = `╭──❍「 *Group Menu* 」
+│ *»* ${prefix}addlist
+│ *»* ${prefix}updatelist
+│ *»* ${prefix}deletelist
+│ *»* ${prefix}Proses 
+│ *»* ${prefix}Done
 │ *»* ${prefix}linkgroup
 │ *»* ${prefix}ephemeral [option]
 │ *»* ${prefix}setppgc [image]
