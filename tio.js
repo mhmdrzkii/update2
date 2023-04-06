@@ -8063,11 +8063,6 @@ ${arr_rows.map((v) => `\n│ *»* ${v.title}`).join("")}
             ini_kangbaned.split("@")[0]
           }*
 ╭──❍「 *Group Menu* 」
-│ *»* ${prefix}addlist
-│ *»* ${prefix}updatelist
-│ *»* ${prefix}deletelist
-│ *»* ${prefix}Proses 
-│ *»* ${prefix}Done
 │ *»* ${prefix}linkgroup
 │ *»* ${prefix}ephemeral [option]
 │ *»* ${prefix}setppgc [image]
@@ -8095,7 +8090,7 @@ ${arr_rows.map((v) => `\n│ *»* ${v.title}`).join("")}
 │ *»* ${prefix}emoji
 │ *»* ${prefix}toqr
 │ *»* ${prefix}gcsearch
-╰─────❍`
+╰────❍
 ╭──❍「 *Webzone Menu* 」
 │ *»* ${prefix}playstore
 │ *»* ${prefix}webtoon
