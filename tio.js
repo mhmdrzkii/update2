@@ -80,22 +80,22 @@ const time2 = moment().tz("Asia/Jakarta").format("HH:mm:ss")
 const jam = moment.tz("asia/jakarta").format("HH:mm:ss")
 const tanggal2 = moment().tz("Asia/Jakarta").format("ll")
 if (time2 < "23:59:00") {
-  var ucapanWaktu = "Selamat Malam 🌌"
+  var ucapanWaktu = "Selamat Malam "
 }
 if (time2 < "19:00:00") {
-  var ucapanWaktu = "Selamat Sore 🌃"
+  var ucapanWaktu = "Selamat Sore "
 }
 if (time2 < "18:00:00") {
-  var ucapanWaktu = "Selamat Sore 🌅"
+  var ucapanWaktu = "Selamat Sore "
 }
 if (time2 < "15:00:00") {
-  var ucapanWaktu = "Selamat Siang 🏙"
+  var ucapanWaktu = "Selamat Siang "
 }
 if (time2 < "11:00:00") {
-  var ucapanWaktu = "Selamat Pagi 🌄"
+  var ucapanWaktu = "Selamat Pagi "
 }
 if (time2 < "05:00:00") {
-  var ucapanWaktu = "Selamat Pagi 🌉"
+  var ucapanWaktu = "Selamat Pagi "
 }
 
 // read database
@@ -7062,12 +7062,6 @@ Untuk Download Media Silahkan Klik salah satu Button dibawah ini atau masukkan c
 ├ *Total Hit Today* : ${jumlahharian}
 ╰──❍
 
-╭──❍「 *INDONESIA* 」❍
-├ *Hari Ini* :\n├ *${hariini}*
-├ *Wib* : ${barat} WIB
-├ *Wita* : ${tengah} WITA
-├ *Wit* : ${timur} WIT
-╰──❍`
           let ments = [ownernya, me, ini_kangbaned]
           let buttons = [
             {
@@ -7098,7 +7092,6 @@ Untuk Download Media Silahkan Klik salah satu Button dibawah ini atau masukkan c
                 title: "Bot WhatsApp",
                 body: "Jangan Spam!",
                 showAdAttribution: true,
-                thumbnail: thumb,
                 mediaType: 2,
                 mediaUrl: ghme,
                 sourceUrl: webmy,
@@ -7283,7 +7276,7 @@ Untuk Download Media Silahkan Klik salah satu Button dibawah ini atau masukkan c
 
           tio.sendMessage(m.chat, {
             text: `*[LIST FROM ${groupName}]*
-${arr_rows.map((v) => `\n• ${v.title}`).join("")}
+${arr_rows.map((v) => `\n✦ ${v.title}`).join("")}
 `,
             quoted: fkontak,
           })
@@ -7302,7 +7295,7 @@ ${arr_rows.map((v) => `\n• ${v.title}`).join("")}
           var args2 = q.split("@")[1]
           if (!q.includes("@"))
             return m.reply(
-              `Gunakan dengan cara ${command} *key@response*\n\n_Contoh_\n\n#${command} tes@apa`
+              `Gunakan dengan cara ${command} *Key@NamaItem*\n\n_Contoh_\n\n#${command} YT@YoutubePremium`
             )
           if (isAlreadyResponList(m.chat, args1, db_respon_list))
             return m.reply(
@@ -7323,10 +7316,10 @@ ${arr_rows.map((v) => `\n• ${v.title}`).join("")}
           )
           if (!q)
             return m.reply(
-              `Gunakan dengan cara ${command} *key*\n\n_Contoh_\n\n#${command} tes`
+              `Gunakan dengan cara ${command} *Key*\n\n_Contoh_\n\n#${command} YT`
             )
           delResponList(m.chat, q, db_respon_list)
-          m.reply(`Sukses delete list message dengan key *${q}*`)
+          m.reply(`Sukses delete list message dengan Key *${q}*`)
         }
         break
 
@@ -7343,7 +7336,7 @@ ${arr_rows.map((v) => `\n• ${v.title}`).join("")}
           var args2 = q.split("@")[1]
           if (!q.includes("@"))
             return m.reply(
-              `Gunakan dengan cara #${command} *key@response*\n\n_Contoh_\n\n#${command} tes@apa`
+              `Gunakan dengan cara #${command} *Key@NamaItem*\n\n_Contoh_\n\n#${command} YT@YoutubePremium1`
             )
           if (!isAlreadyResponListGroup(m.chat, db_respon_list))
             return m.reply(
@@ -7593,7 +7586,7 @@ ${arr_rows.map((v) => `\n• ${v.title}`).join("")}
               type: 1,
             },
           ]
-          await tio.sendButtonText(m.chat, buttons, rndom, esce, m, {
+          await tio.sendButtonText(m.chatF, buttons, rndom, esce, m, {
             quoted: fkontak,
           })
         }
