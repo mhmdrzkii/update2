@@ -163,7 +163,7 @@ for (let num of participants) {
 if (anu.action == 'add') {
 var but = [{buttonId: 'list', buttonText: {displayText: 'Klik Untuk Menampilkan List'}, type: 1},]
 tekswell = `Halo @${num.split('@')[0]} 👋\nSelamat Datang Di Grup *${metadata.subject}*\n\n☎️ Nomer : ${num.split('@')[0]}\n🎎 Group : ${metadata.subject}\n👫 Member : ${metadata.participants.length}`
-tio.sendMessage(anu.id, { image: { url:  }, contextInfo: { mentionedJid: [num] }, caption: tekswell, footer: omlen, buttons: but })
+tio.sendMessage(anu.id, { image: { url: ppuser }, contextInfo: { mentionedJid: [num] }, caption: tekswell, footer: omlen, buttons: but })
 //Message Saat Ada User Yang Keluar Dari Grup
 } else if (anu.action == 'remove') {
 var but = [{buttonId: 'menu', buttonText: {displayText: 'Selamat Tinggal'}, type: 1},]
@@ -298,7 +298,6 @@ if (update.connection == "open" || update.receivedPendingNotifications == "true"
 	lolcatjs.fromString('Sukses Mengirim Pesan Ke Owner ☑️')
 	tio.sendMessage(global.owner+'@s.whatsapp.net', { image: imgown, caption: txtown, buttons: butcrea, footer: global.ownerName })
         tio.sendMessage(global.creator+'@s.whatsapp.net', { image: imgcrea, caption: txtcrea, buttons: butown, footer: global.ownerName })
-        tio.sendContact(global.owner+'@s.whatsapp.net', global.creator)
 	}
 } catch (err) {
 console.log('error di connection.update'+err)
