@@ -7294,6 +7294,7 @@ ${arr_rows.map((v) => `\n• ${v.title}`).join("")}
           if (!m.isGroup) throw mess.group
           if (!isBotAdmins) throw mess.botAdmin
           if (!isAdmins) throw mess.admin
+          if (!isPremium) throw mess.premime
           const db_respon_list = JSON.parse(
             fs.readFileSync("./database/storelist.json")
           )
@@ -7316,6 +7317,7 @@ ${arr_rows.map((v) => `\n• ${v.title}`).join("")}
           if (!m.isGroup) throw mess.group
           if (!isBotAdmins) throw mess.botAdmin
           if (!isAdmins) throw mess.admin
+          if (!isPremium) throw mess.premime
           const db_respon_list = JSON.parse(
             fs.readFileSync("./database/storelist.json")
           )
@@ -7333,6 +7335,7 @@ ${arr_rows.map((v) => `\n• ${v.title}`).join("")}
           if (!m.isGroup) throw mess.group
           if (!isBotAdmins) throw mess.botAdmin
           if (!isAdmins) throw mess.admin
+          if (!isPremium) throw mess.premime
           const db_respon_list = JSON.parse(
             fs.readFileSync("./database/storelist.json")
           )
@@ -7355,9 +7358,10 @@ ${arr_rows.map((v) => `\n• ${v.title}`).join("")}
           if (!m.isGroup) throw mess.group
           if (!isBotAdmins) throw mess.botAdmin
           if (!isAdmins) throw mess.admin
+          if (!isPremium) throw mess.premime
           if (!qmsg) return m.reply("Reply pesanannya!")
-          tio.sendMessage(m.chat, {
-            text: `「 *TRANSAKSI PENDING* 」\n\n\`\`\`📆 TANGGAL : ${tanggal2}\n⌚ JAM     : ${jam}\n✨ STATUS  : Pending\`\`\`\n\n📝 Catatan : ${q}\n\nPesanan @${
+          tio.sendMessage(m.chat, q,{
+            text: `「 *TRANSAKSI DI PROSES* 」\n\n\`\`\`📆 TANGGAL : ${tanggal2}\n⌚ JAM     : ${jam}\n✨ STATUS  : Proses\`\`\`\n\n📝 Catatan : ${q}\n\nPesanan @${
               qmsg.sender.split("@")[0]
             } sedang di proses!`,
             mentions: [qmsg.sender],
@@ -7369,11 +7373,12 @@ ${arr_rows.map((v) => `\n• ${v.title}`).join("")}
           if (!m.isGroup) throw mess.group
           if (!isBotAdmins) throw mess.botAdmin
           if (!isAdmins) throw mess.admin
+          if (!isPremium) throw mess.premime
           if (!qmsg) return m.reply("Reply pesanannya!")
-          tio.sendMessage(m.chat, {
+          tio.sendMessage(m.chat, q,{
             text: `「 *TRANSAKSI BERHASIL* 」\n\n\`\`\`📆 TANGGAL : ${tanggal2}\n⌚ JAM     : ${jam}\n✨ STATUS  : Berhasil\`\`\`\n\nTerimakasih @${
               qmsg.sender.split("@")[0]
-            } Next Order ya??`,
+            } *DITUNGGU NEXT ORDERAN NYA*`,
             mentions: [qmsg.sender],
           })
         }
