@@ -163,7 +163,7 @@ for (let num of participants) {
 if (anu.action == 'add') {
 var but = [{buttonId: 'list', buttonText: {displayText: 'Klik Untuk Menampilkan List'}, type: 1},]
 tekswell = `Halo @${num.split('@')[0]} 👋\nSelamat Datang Di Grup *${metadata.subject}*\n\n☎️ Nomer : ${num.split('@')[0]}\n🎎 Group : ${metadata.subject}\n👫 Member : ${metadata.participants.length}`
-tio.sendMessage(anu.id, { image: { url: ppuser }, contextInfo: { mentionedJid: [num] }, caption: tekswell, footer: omlen, buttons: but })
+tio.sendMessage(anu.id, { image: { url:  }, contextInfo: { mentionedJid: [num] }, caption: tekswell, footer: omlen, buttons: but })
 //Message Saat Ada User Yang Keluar Dari Grup
 } else if (anu.action == 'remove') {
 var but = [{buttonId: 'menu', buttonText: {displayText: 'Selamat Tinggal'}, type: 1},]
