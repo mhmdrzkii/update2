@@ -8062,7 +8062,7 @@ ${arr_rows.map((v) => `\n│ *»* ${v.title}`).join("")}
           anu = `*${ucapanWaktu}*\n*kak @${me.split("@")[0]}*\n*Powered : @${
             ini_kangbaned.split("@")[0]
           }*
-          goup = `╭──❍「 *Group Menu* 」
+╭──❍「 *Group Menu* 」
 │ *»* ${prefix}addlist
 │ *»* ${prefix}updatelist
 │ *»* ${prefix}deletelist
