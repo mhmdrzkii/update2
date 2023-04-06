@@ -2,9 +2,9 @@
 
 const fs = require("fs")
 const chalk = require("chalk")
-global.owner = ["6285338939606"]
-global.ownernomer = "6285338939606"
-global.premium = ["6285338939606"]
+global.owner = ["6283850055745"]
+global.ownernomer = "6283850055745"
+global.premium = ["6283850055745"]
 global.packname = "Sticker By"
 global.author = "RYZSTORE"
 global.jumlha = "999"
@@ -16,7 +16,7 @@ global.mess = {
   success: "Done ✓",
   admin: "Fitur Khusus Admin Group!",
   botAdmin: "Bot Harus Menjadi Admin Terlebih Dahulu!",
-  premime: "Fitur Khusus Premium Kalo Mau Daftar Ketik Sewa / Chat Owner",
+  premime: "*FITUR KHUSUS PREMIUM / SEWA BOT, SILAKAN HUBUNGI OWNER*",
   owner: "Fitur Khusus Owner Bot",
   group: "Fitur Digunakan Hanya Untuk Group!",
   private: "Fitur Digunakan Hanya Untuk Private Chat!",
