@@ -80,22 +80,22 @@ const time2 = moment().tz("Asia/Jakarta").format("HH:mm:ss")
 const jam = moment.tz("asia/jakarta").format("HH:mm:ss")
 const tanggal2 = moment().tz("Asia/Jakarta").format("ll")
 if (time2 < "23:59:00") {
-  var ucapanWaktu = "Selamat Malam "
+  var ucapanWaktu = "Selamat Malam"
 }
 if (time2 < "19:00:00") {
-  var ucapanWaktu = "Selamat Sore "
+  var ucapanWaktu = "Selamat Sore"
 }
 if (time2 < "18:00:00") {
-  var ucapanWaktu = "Selamat Sore "
+  var ucapanWaktu = "Selamat Sore"
 }
 if (time2 < "15:00:00") {
-  var ucapanWaktu = "Selamat Siang "
+  var ucapanWaktu = "Selamat Siang"
 }
 if (time2 < "11:00:00") {
-  var ucapanWaktu = "Selamat Pagi "
+  var ucapanWaktu = "Selamat Pagi"
 }
 if (time2 < "05:00:00") {
-  var ucapanWaktu = "Selamat Pagi "
+  var ucapanWaktu = "Selamat Pagi"
 }
 
 // read database
@@ -699,10 +699,10 @@ tio.readMessages([m.key])
     // total hit
     global.hit = {}
     if (isCmd) {
-      data = await fetchJson("https://api.countapi.xyz/hit/tio.com/visits")
+      data = await fetchJson("https://api.countapi.xyz/hit/ryzstoree.com/visits")
       jumlahcmd = `${data.value}`
       dataa = await fetchJson(
-        `https://api.countapi.xyz/hit/tio.com${moment
+        `https://api.countapi.xyz/hit/ryzstoree.com${moment
           .tz("Asia/Jakarta")
           .format("DDMMYYYY")}/visits`
       )
@@ -731,8 +731,8 @@ tio.readMessages([m.key])
         let isgclink = isLinkThisGc.test(m.text)
         if (isgclink)
           return m.reply(`*maaf gak jadi, karena kamu ngirim link group ini*`)
-        if (isAdmins) return m.reply(`*maaf kamu admin*`)
-        if (isCreator) return m.reply(`*maaf kamu owner bot ku*`)
+        if (isAdmins) return m.reply(`*Kamu Admin Sat*`)
+        if (isCreator) return m.reply(`*#Owner Kebal Hukum*`)
         tio.groupParticipantsUpdate(m.chat, [m.sender], "remove")
       }
     }
@@ -7133,9 +7133,9 @@ Untuk Download Media Silahkan Klik salah satu Button dibawah ini atau masukkan c
               title: "⚠︎  ∫ » CHANGE MENU BOT « ✧",
               rows: [
                 {
-                  title: "✦  「 Bot Store 」*PREMIUM*",
+                  title: "✦  「 Bot Store 」PREMIUM",
                   rowId: `mgroup`,
-                  description: `╰ ► 👥Fitur Buat Grup, Tapi Hati Hati Admin :v`,
+                  description: `╰ ► 👥Fitur Buat Grup, Khusus Member`,
                 },
                 {
                   title: "✦  「 Webzone 」",
@@ -7271,7 +7271,7 @@ Untuk Download Media Silahkan Klik salah satu Button dibawah ini atau masukkan c
             }
           }
           console.log(arr_rows)
-          let kukiw = `*Kak ${pushname}*`
+          let kukiw = `Kak *${pushname}*`
           let sections = [
             {
               title: `*List from ${groupName}*`,
@@ -7280,7 +7280,7 @@ Untuk Download Media Silahkan Klik salah satu Button dibawah ini atau masukkan c
           ]
 
           tio.sendMessage(m.chat, {
-            text: `*[LIST FROM ${groupName}]*
+            text: `*[ LIST FROM ${groupName} ]*
 ${arr_rows.map((v) => `\n│ *»* ${v.title}`).join("")}
 `,
             quoted: fkontak,
@@ -7359,7 +7359,7 @@ ${arr_rows.map((v) => `\n│ *»* ${v.title}`).join("")}
           if (!isAdmins) throw mess.admin
           if (!isPremium) throw mess.premime
           if (!qmsg) return m.reply("Reply pesanannya!")
-          tio.sendMessage(m.chat, {
+          tio.sendMessage(m.chat, q,{
             text: `「 *TRANSAKSI DI PROSES* 」\n\n\`\`\`📆 TANGGAL : ${tanggal2}\n⌚ JAM     : ${jam}\n✨ STATUS  : Proses\`\`\`\n\n📝 Catatan : ${q}\n\nPesanan @${
               qmsg.sender.split("@")[0]
             } sedang di proses!`,
@@ -8062,7 +8062,12 @@ ${arr_rows.map((v) => `\n│ *»* ${v.title}`).join("")}
           anu = `*${ucapanWaktu}*\n*kak @${me.split("@")[0]}*\n*Powered : @${
             ini_kangbaned.split("@")[0]
           }*
-╭──❍「 *Group Menu* 」
+          goup = `╭──❍「 *Group Menu* 」
+│ *»* ${prefix}addlist
+│ *»* ${prefix}updatelist
+│ *»* ${prefix}deletelist
+│ *»* ${prefix}Proses 
+│ *»* ${prefix}Done
 │ *»* ${prefix}linkgroup
 │ *»* ${prefix}ephemeral [option]
 │ *»* ${prefix}setppgc [image]
@@ -8090,7 +8095,7 @@ ${arr_rows.map((v) => `\n│ *»* ${v.title}`).join("")}
 │ *»* ${prefix}emoji
 │ *»* ${prefix}toqr
 │ *»* ${prefix}gcsearch
-╰────❍
+╰─────❍`
 ╭──❍「 *Webzone Menu* 」
 │ *»* ${prefix}playstore
 │ *»* ${prefix}webtoon
