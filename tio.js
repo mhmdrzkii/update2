@@ -6959,9 +6959,9 @@ Untuk Download Media Silahkan Klik salah satu Button dibawah ini atau masukkan c
         {
           rules = `╭──❍「 *RULES BOT* 」
 │
-├ Dilarang spam Command Bot
-├ Dilarang menelpon Bot
-├ Dilarang menculik Bot
+├ *DILARANG SPAM COMMAND*
+├ *DILARANG MELAKUKAN PANGGILAN SUARA KPD BOT*
+├ *DILARANG MEMASUKAN BOT KEDALAM GRUP TANPA IZIN OWNER*
 │
 ╰────❍`
           let buttons = [
@@ -7045,7 +7045,7 @@ Untuk Download Media Silahkan Klik salah satu Button dibawah ini atau masukkan c
         {
           let ownernya = "0@s.whatsapp.net"
           let me = m.sender
-          let jawab = `*_${ucapanWaktu_}*
+          let jawab = `*_${ucapanWaktu}_*
 ╭──❍「 *INFO USER* 」❍
 ├ *Nama* : ${pushname}
 ├ *Number* : @${me.split("@")[0]}
