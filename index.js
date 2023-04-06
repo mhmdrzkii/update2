@@ -129,7 +129,6 @@ const { state, saveCreds } = await useMultiFileAuthState('./src/sesi')
     tio.ev.on('groups.update', async tioxd => {
        console.log(`${chalk.bgRed("Events Update")} 
        `.trim(), tioxd)
-       let wm_tiodev = { url : ppgc }
        if (tioxd[0].announce == true) {
        tio.send5ButImg(tioxd[0].id, `「 *Group Settings Change* 」\n\nGroup telah ditutup oleh admin, Sekarang hanya admin yang dapat mengirim pesan !`, `GROUP MESSAGE`, wm_tiodev, [])
        } else if(tioxd[0].announce == false) {
@@ -163,12 +162,12 @@ for (let num of participants) {
         
 if (anu.action == 'add') {
 var but = [{buttonId: 'list', buttonText: {displayText: 'Klik Untuk Menampilkan List'}, type: 1},]
-tekswell = `Halo @${num.split('@')[0]} 👋\nSelamat Datang Di Grup *${metadata.subject}*\n\n📛 Name : @${num.split('@')[0]}\n☎️ Nomer : ${num.split('@')[0]}\n🎎 Group : ${metadata.subject}\n👫 Member : ${metadata.participants.length}`
+tekswell = `Halo @${num.split('@')[0]} 👋\nSelamat Datang Di Grup *${metadata.subject}*\n\n☎️ Nomer : ${num.split('@')[0]}\n🎎 Group : ${metadata.subject}\n👫 Member : ${metadata.participants.length}`
 tio.sendMessage(anu.id, { image: { url: ppuser }, contextInfo: { mentionedJid: [num] }, caption: tekswell, footer: omlen, buttons: but })
 //Message Saat Ada User Yang Keluar Dari Grup
 } else if (anu.action == 'remove') {
 var but = [{buttonId: 'menu', buttonText: {displayText: 'Selamat Tinggal'}, type: 1},]
-teksbye = `Selamat Tinggal @${num.split("@")[0]} 👋\n\n📛 Name : @${num.split('@')[0]}\n☎️ Nomer : ${num.split('@')[0]}\n🎎 Group : ${metadata.subject}\n👫 Member : ${metadata.participants.length}`
+teksbye = `Selamat Tinggal @${num.split("@")[0]} 👋\☎️ Nomer : ${num.split('@')[0]}\n🎎 Group : ${metadata.subject}\n👫 Member : ${metadata.participants.length}`
 tio.sendMessage(anu.id, { image: { url: ppuser }, contextInfo: { mentionedJid: [num] }, caption: teksbye, footer: omlen, buttons: but })
 //Message Saat Ada Yang Naik Jabatan
 } else if (anu.action == 'promote') {
