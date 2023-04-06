@@ -156,6 +156,11 @@ if (!anu.participants.includes(tio.user.jid)) {
 let metadata = await tio.groupMetadata(anu.id)
 let participants = anu.participants
 for (let num of participants) {
+try {
+ppuser = await tio.profilePictureUrl(num, 'image') 
+} catch {
+ppuser = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCB7iTtz1aO68sjGhK42vPQlte4MSsegaqUQ&usqp=CAU'
+}
 
 //Message Saat Ada User Yang Masuk Ke Grup
 //f (global.db.data.chats[m.chat].welcome) {
